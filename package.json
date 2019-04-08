@@ -1,0 +1,8 @@
+{
+  "name": "graphql",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/ryanwooj/graphql",
+  "author": "Ryan Woo devrwoo@gmail.com",
+  "license": "MIT"
+}
