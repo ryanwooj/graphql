@@ -3,17 +3,18 @@ import resolvers from './graphql/resolvers';
 
 const typeDefs = gql`
     type Movie {
-        id: Int!,
-        title: String!,
-        rating: Float!,
-        summary: String!,
-        language: String!,
-        medium_cover_image: String!,
+        id: Int!
+        title: String!
+        rating: Float!
+        summary: String!
+        language: String!
+        medium_cover_image: String!
         description_intro: String!
     }
     type Query {
         movies(limit: Int, rating: Float): [Movie]!
-        movie(id: Int) : [Movie]!
+        movie(id: Int!): Movie
+        suggestions(id:Int!): [Movie]!
     }
 `
 
