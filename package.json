@@ -6,10 +6,12 @@
   "author": "Ryan Woo devrwoo@gmail.com",
   "license": "MIT",
   "dependencies": {
+    "apollo-server": "^2.4.8",
     "axios": "^0.18.0",
     "babel-cli": "^6.26.0",
     "babel-preset-env": "^1.7.0",
     "babel-preset-stage-3": "^6.24.1",
+    "graphql": "^14.2.1",
     "graphql-yoga": "^1.17.4",
     "node-fetch": "^2.3.0"
   },
