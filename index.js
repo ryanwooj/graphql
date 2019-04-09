@@ -1,8 +1,8 @@
-import { GraphQLServer } from 'graphql-yoga';
+import { ApolloServer, gql } from 'qpollo-server';
 import resolvers from './graphql/resolvers';
 
 
-const server = new GraphQLServer({
+const server = new ApolloServer({
     typeDefs: "graphql/schema.graphql",
     resolvers: resolvers,
     playground: true,
@@ -11,4 +11,4 @@ const server = new GraphQLServer({
 
 
 
-server.start(() => console.log('Server is Running on port 4000'));
+server.listen(() => console.log('Server is Running on port 4000'));
