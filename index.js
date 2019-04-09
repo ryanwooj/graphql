@@ -1,9 +1,23 @@
-import { ApolloServer, gql } from 'qpollo-server';
+import { ApolloServer, gql } from 'apollo-server';
 import resolvers from './graphql/resolvers';
 
+const typeDefs = gql`
+    type Movie {
+        id: Int!,
+        title: String!,
+        rating: Float!,
+        summary: String!,
+        language: String!,
+        medium_cover_image: String!,
+        description_intro: String!
+    }
+    type Query {
+        movies(limit: Int, rating: Float): [Movie]!
+    }
+`
 
 const server = new ApolloServer({
-    typeDefs: "graphql/schema.graphql",
+    typeDefs: typeDefs,
     resolvers: resolvers,
     playground: true,
     introspection: true
@@ -11,4 +25,6 @@ const server = new ApolloServer({
 
 
 
-server.listen(() => console.log('Server is Running on port 4000'));
+server.listen({port:4000}).then(({url}) => {
+   console.log(`🚀 Server ready at ${url}`)
+});
