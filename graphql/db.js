@@ -92,7 +92,7 @@ export const getMovies = async (limit, rating) => {
     return movies;
 };
 
-export const getMovie = async id => {
+export const getMovieDetails = async id => {
     const { 
         data: {
             data: { movie }
